@@ -1,0 +1,187 @@
+/* ---------- ROOT ---------- */
+
+:root {
+    --parchment: #e6d8b8;
+    --paper: #d9c7a3;
+    --dark-brown: #3d2c1e;
+    --header-brown: #5a4634;
+    --bronze: #8c6a43;
+    --moss: #6b7755;
+    --gold: #b08d57;
+}
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background: var(--parchment);
+    color: var(--dark-brown);
+    line-height: 1.7;
+    padding: 30px;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 2px solid var(--bronze);
+}
+
+header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 3rem;
+    color: var(--header-brown);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    padding: 25px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--parchment);
+
+    background: var(--bronze);
+
+    padding: 10px 20px;
+
+    border: 2px solid var(--header-brown);
+
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--header-brown);
+}
+
+/* ---------- SECTIONS ---------- */
+
+section {
+    background: var(--paper);
+
+    border: 2px solid var(--bronze);
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-family: "Cinzel", serif;
+
+    margin-bottom: 15px;
+
+    color: var(--header-brown);
+}
+
+/* ---------- FLIPBOOK ---------- */
+
+.flipbook-container {
+    width: 100%;
+    height: 800px;
+
+    border: 2px solid var(--bronze);
+
+    overflow: hidden;
+}
+
+.flipbook-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ---------- BOOK SHELF ---------- */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.book {
+    text-decoration: none;
+
+    height: 220px;
+
+    background: linear-gradient(
+        to right,
+        #5a4634,
+        #6a533e,
+        #5a4634
+    );
+
+    border: 3px solid var(--bronze);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--parchment);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1.3rem;
+
+    transition: transform 0.2s ease;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 2px solid var(--bronze);
+
+    margin-top: 40px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .flipbook-container {
+        height: 500px;
+    }
+
+}
